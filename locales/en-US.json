@@ -1,0 +1,26 @@
+{
+    "header": {
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "contact": "Contact Us"
+    },
+    "common": {
+      "switchLang": "Switch Language",
+      "chinese": "Chinese",
+      "english": "English"
+    },
+    "menu": {
+        "home": "Home",
+        "aboutUs": "About Us",
+        "corporatePolicies": "Corporate Policies & Certifications",
+        "securityPolicy": "Security Policy",
+        "informationSecurityPolicy": "Information Security Policy",
+        "businessContinuityPolicy": "Business Continuity Policy",
+        "terminal": "Terminal",
+        "customsVatRegime": "Customs & VAT Regime",
+        "freeZoneTypeI": "Free-Zone Type I",
+        "contactUs": "Contact Us"
+      }
+  }
+      

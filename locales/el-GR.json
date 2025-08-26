@@ -1,0 +1,26 @@
+
+  {
+    "header": {
+      "home": "Αρχική",
+      "about": "Σχετικά με εμάς",
+      "products": "Καλώς ήρθατε",
+      "contact": "Καλώς ήρθατε"
+    },
+    "common": {
+      "switchLang": "Καλώς ήρθατε",
+      "chinese": "Καλώς ήρθατε",
+      "english": "EngΚαλώς ήρθατεlish"
+    },
+    "menu": {
+        "home": "ΑρχικήHome",
+        "aboutUs": "ΑρχικήAbout Us",
+        "corporatePolicies": "ΑρχικήCorporate Policies & Certifications",
+        "securityPolicy": "ΑρχικήSecurity Policy",
+        "informationSecurityPolicy": "ΑρχικήInformation Security Policy",
+        "businessContinuityPolicy": "ΑρχικήBusiness Continuity Policy",
+        "terminal": "ΑρχικήTerminal",
+        "customsVatRegime": "ΑρχικήCustoms & VAT Regime",
+        "freeZoneTypeI": "ΑρχικήFree-Zone Type I",
+        "contactUs": "ΑρχικήContact Us"
+      }
+  }

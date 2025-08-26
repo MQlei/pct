@@ -1,0 +1,680 @@
+// 菜单数据
+const MENU_ITEMS = [{
+    path: "/",
+    name: "Home",
+    title: "Home",
+    nume: '0',
+    seoMeta: {
+      title: "Home",
+      icon: "",
+      description: "",
+      titleKey: "menu.home", // 新增：对应语言包的key
+    },
+  },
+  {
+    path: "/about",
+    name: "About",
+    title: "About Us",
+    seoMeta: {
+      title: "About Us",
+      icon: "",
+      description: "",
+      titleKey: "menu.aboutUs", // 新增
+    },
+    children: [
+      // {
+      //   path: "philosophy",
+      //   name: "Philosophy",
+      //   seoMeta: {
+      //     title: "Corporate Philosophy",
+      //     parent: "About Us",
+      //     icon: "",
+      //     description: "",
+      //   },
+      // },
+      {
+        path: "certifications",
+        name: "Certifications",
+        seoMeta: {
+          title: "Corporate Policies & Certifications",
+          // parent: "About Us",
+          titleKey: "menu.corporatePolicies", // 新增
+          parent: "About Us",
+          parentKey: "menu.aboutUs", // 父菜单的key
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "securitypolicy",
+            name: "SecurityPolicy",
+            seoMeta: {
+              title: "Security Policy",
+              titleKey: "menu.securityPolicy", // 新增
+              parent: "Corporate Policies & Certifications",
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "informationsecurity",
+            name: "InformationSecurityPolicy",
+            seoMeta: {
+              title: "Information Security Policy",
+              parent: "Corporate Policies & Certifications",
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "businesscontinuity",
+            name: "BusinessContinuityPolicy",
+            seoMeta: {
+              title: "Business Continuity Policy",
+              parent: "Corporate Policies & Certifications",
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          // {
+          //   path: "corporatereports",
+          //   name: "CorporateReports",
+          //   seoMeta: {
+          //     title: "Corporate Reports",
+          //     parent: "Corporate Policies & Certifications",
+          //     root: "About Us",
+          //     icon: "CaretRight",
+          //     description: "",
+          //   },
+          // },
+          // {
+          //   path: "financialstatements",
+          //   name: "FinancialStatements",
+          //   seoMeta: {
+          //     title: "Financial Statements",
+          //     parent: "Corporate Policies & Certifications",
+          //     root: "About Us",
+          //     icon: "CaretRight",
+          //     description: "",
+          //   },
+          // },
+          // {
+          //   path: "corporatesocialresponsibility",
+          //   name: "corporatesocialresponsibility",   
+          //   seoMeta: {
+          //     title: "corporate social responsibility",
+          //     parent: "Corporate Policies & Certifications",
+          //     root: "About Us",
+          //     icon: "CaretRight",
+          //     description: "",
+          //   },
+          // },
+        ],
+      },
+
+
+
+
+      {
+        path: "responsibility",
+        name: "Responsibility",
+        seoMeta: {
+          title: "Corporate Social Responsibility",
+          parent: "About Us",
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "csrprofile",
+            name: "CsrProfile",
+            seoMeta: {
+              title: "CSR Profile",
+              parent: "Corporate Social Responsibility",
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "scholarshipsprogram",
+            name: "ScholarshipsProgram",
+            seoMeta: {
+              title: "Scholarships Program",
+              parent: "Corporate Social Responsibility",
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+
+      {
+        path: "corporatereports",
+        name: "corporatereports",
+        seoMeta: {
+          title: "Corporate Reports",
+          parent: "About Us",
+          icon: "",
+          description: "",
+        },
+        children: [
+
+          {
+            path: "financialstatements",
+            name: "FinancialStatements",
+            seoMeta: {
+              title: "Financial Statements",
+              parent: "Corporate Policies & Certifications",
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "corporatesocialresponsibility",
+            name: "corporatesocialresponsibility",
+            seoMeta: {
+              title: "Sustainability Reports",
+              parent: "Sustainability Reports",
+              // banner-about-corporatepoliciescertifications-corporatesocialresponsibility
+              root: "About Us",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+
+      // {
+      //   path: "corporatepoliciescertifications",
+      //   name: "CorporatePoliciesCertifications",
+      //   seoMeta: {
+      //     title: "Corporate Policies & Certifications",
+      //     parent: "About Us",
+      //     icon: "",
+      //     description: "",
+      //   },
+      //   children: [
+      //     {
+      //       path: "corporatereports",
+      //       name: "CorporateReports",
+      //       seoMeta: {
+      //         title: "Corporate Reports",
+      //         parent: "Corporate Policies & Certifications",
+      //         root: "About Us",
+      //         icon: "CaretRight",
+      //         description: "",
+      //       },
+      //     },
+      //     {
+      //       path: "financialstatements",
+      //       name: "FinancialStatements",
+      //       seoMeta: {
+      //         title: "Financial Statements",
+      //         parent: "Corporate Policies & Certifications",
+      //         root: "About Us",
+      //         icon: "CaretRight",
+      //         description: "",
+      //       },
+      //     },
+      //     {
+      //       path: "corporatesocialresponsibility",
+      //       name: "corporatesocialresponsibility",   
+      //       seoMeta: {
+      //         title: "corporate social responsibility",
+      //         parent: "Corporate Policies & Certifications",
+      //         // banner-about-corporatepoliciescertifications-corporatesocialresponsibility
+      //         root: "About Us",
+      //         icon: "CaretRight",
+      //         description: "",
+      //       },
+      //     },
+      //   ],
+      // },
+      {
+        path: "philosophy",
+        name: "Philosophy",
+        seoMeta: {
+          title: "Corporate Philosophy",
+          parent: "About Us",
+          icon: "",
+          description: "",
+        },
+      },
+    ],
+  },
+  {
+    path: "/terminal",
+    name: "Terminal",
+    title: "Terminal",
+    seoMeta: {
+      title: "Terminal",
+      icon: "",
+      description: "",
+    },
+    children: [
+      // {
+      //   path: "specifications",
+      //   name: "Specifications",
+      //   seoMeta: {
+      //     title: "Layout & Specifications",
+      //     parent: "Terminal",
+      //     icon: "",
+      //     description: "",
+      //   },
+      // },
+
+      {
+        path: "vatregime",
+        name: "VatRegime",
+        seoMeta: {
+          title: "Customs & VAT Regime",
+          parent: "Terminal",
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "freezonetypei",
+            name: "FreeZoneTypeI",
+            seoMeta: {
+              title: "Free-Zone Type I",
+              parent: "Customs & VAT Regime",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "defermentandreversevat",
+            name: "DefermentAndReverseVAT",
+            seoMeta: {
+              title: "Deferment and Reverse VAT",
+              parent: "Customs & VAT Regime",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "customsregime",
+            name: "CustomsRegime",
+            seoMeta: {
+              title: "Customs Regime 42",
+              parent: "Customs & VAT Regime",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "authorizationtemplate",
+            name: "AuthorizationTemplateForReceipt",
+            seoMeta: {
+              title: "Authorization Template for receipt of cargo / container from PCT S.A.",
+              parent: "Customs & VAT Regime",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+      {
+        path: "regulations",
+        name: "Regulations",
+        seoMeta: {
+          title: "Procedures & Regulations",
+          parent: "Terminal",
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "operationsprocedures",
+            name: "OperationsProcedures",
+            seoMeta: {
+              title: "Operations Procedures",
+              parent: "Procedures & Regulations",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "unclaimedcargoregulation",
+            name: "UnclaimedCargoRegulation",
+            seoMeta: {
+              title: "Unclaimed Cargo Regulation",
+              parent: "Procedures & Regulations",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "vesselswastemanagementplan",
+            name: "VesselsWasteManagementPlan",
+            seoMeta: {
+              title: "Vessels Waste Management Plan",
+              parent: "Procedures & Regulations",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "safemooring",
+            name: "SafeMooring",
+            seoMeta: {
+              title: "Safe Mooring",
+              parent: "Procedures & Regulations",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+      {
+        path: "services",
+        name: "Services",
+        seoMeta: {
+          title: "Services",
+          parent: "Terminal",
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "pcthpcs",
+            name: "PCTHPCS",
+            seoMeta: {
+              title: "PCT HPCS",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "webip",
+            name: "WebIP",
+            seoMeta: {
+              title: "Web IP",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "theautogatesystem",
+            name: "TheAutogateSystem",
+            seoMeta: {
+              title: "Direct Access To The Autogate System",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "ehub",
+            name: "EHub",
+            seoMeta: {
+              title: "eHub",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "terminalaccess",
+            name: "TerminalAccess",
+            seoMeta: {
+              title: "Terminal Access",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "intermodaltransportation",
+            name: "IntermodalTransportation",
+            seoMeta: {
+              title: "Intermodal Transportation",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "logisticservice",
+            name: "LogisticService",
+            seoMeta: {
+              title: "Logistic Service",
+              parent: "Services",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+      {
+        path: "vessels",
+        name: "Vessels",
+        seoMeta: {
+          title: "Vessels",
+          parent: "Terminal",
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "scheduled",
+            name: "Scheduled",
+            seoMeta: {
+              title: "Scheduled",
+              parent: "Vessels",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "working",
+            name: "Working",
+            seoMeta: {
+              title: "Working",
+              parent: "Vessels",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "longterm",
+            name: "LongTerm",
+            seoMeta: {
+              title: "Long-Term",
+              parent: "Vessels",
+              root: "Terminal",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+      {
+        path: "specifications",
+        name: "Specifications",
+        seoMeta: {
+          title: "Layout & Specifications",
+          parent: "Terminal",
+          icon: "",
+          description: "",
+        },
+      },
+    ],
+  },
+  {
+    path: "/announcwements",
+    name: "Announcwements",
+    title: "Announcwements",
+    seoMeta: {
+      title: "Announcwements",
+      icon: "",
+      description: "",
+    },
+    children: [{
+        path: "unclaimedcargo",
+        name: "UnclaimedCargo",
+        seoMeta: {
+          title: "Unclaimed Cargo",
+          parent: "Announcwements",
+          icon: "",
+          description: "",
+        },
+      },
+      {
+        path: "tenders",
+        name: "Tenders",
+        seoMeta: {
+          title: "Tenders",
+          parent: "Announcwements",
+          icon: "",
+          description: "",
+        },
+      },
+    ],
+  },
+  {
+    path: "/mediacenter",
+    name: "MediaCenter",
+    title: "Media Center",
+    nume: '1',
+    seoMeta: {
+      title: "MediaCenter",
+      icon: "",
+      description: "",
+    },
+    children: [{
+        path: "pctmediakit",
+        name: "PctMediaKit",
+        nume: '2',
+        seoMeta: {
+          title: "PCT Media Kit",
+          parent: "Media Center",
+          icon: "",
+          description: "",
+        },
+        children: [{
+            path: "photovideogallery",
+            name: "PhotoVideoGallery",
+            nume: '3',
+            seoMeta: {
+              title: "Photo & Video Gallery",
+              parent: "PCT Media Kit",
+              // nume:'333',
+              root: "Media Center",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+          {
+            path: "companypresentations",
+            name: "CompanyPresentations",
+            seoMeta: {
+              title: "Company Presentations",
+              parent: "PCT Media Kit",
+              root: "Media Center",
+              icon: "CaretRight",
+              description: "",
+            },
+          },
+        ],
+      },
+      {
+        path: "companynews",
+        name: "CompanyNews",
+        seoMeta: {
+          title: "Company News",
+          parent: "Media Center",
+          icon: "",
+          description: "",
+        },
+      },
+      {
+        path: "pressreleases",
+        name: "PressReleases",
+        seoMeta: {
+          title: "Press Releases",
+          parent: "Media Center",
+          icon: "",
+          description: "",
+        },
+      },
+    ],
+  },
+  {
+    path: "/careers",
+    name: "Careers",
+    seoMeta: {
+      title: "Careers",
+      icon: "",
+      description: "",
+    },
+    children: [{
+      path: "opportunities",
+      name: "Opportunities",
+      seoMeta: {
+        title: "Opportunities",
+        parent: "Careers",
+        icon: "",
+        description: "",
+      },
+    }, ],
+  },
+  {
+    path: "/contactus",
+    name: "Contact Us",
+    seoMeta: {
+      title: "Contact Us",
+      icon: "",
+      description: "",
+    },
+  },
+];
+
+export const useNavigation = () => {
+  const menuItems = MENU_ITEMS;
+
+  // // 查找当前路由的完整路径信息（用于面包屑）
+  // const findRouteInfo = (path, items = menuItems) => {
+  //   for (const item of items) {
+  //     if (item.path === path) return [item];
+  //     if (item.children) {
+  //       const found = findRouteInfo(path, item.children);
+  //       if (found) return [item, ...found];
+  //     }
+  //   }
+  //   return null;
+  // };
+
+  // // 在菜单中查找匹配的项
+  // const findMenuItem = (menuItems, path) => {
+  //   return menuItems.find((item) => {
+  //     const itemPath = item.path.split("/").pop(); // 获取路径的最后一段
+  //     return itemPath === path;
+  //   });
+  // };
+
+  return {
+    menuItems,
+    // findRouteInfo,
+  };
+};
